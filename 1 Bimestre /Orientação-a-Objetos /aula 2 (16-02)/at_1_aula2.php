@@ -1,6 +1,5 @@
 <?php
 
-
     for ($i=0; $i < 10; $i++) { 
 
         $numeroInt = readline("Informe um número: ");
