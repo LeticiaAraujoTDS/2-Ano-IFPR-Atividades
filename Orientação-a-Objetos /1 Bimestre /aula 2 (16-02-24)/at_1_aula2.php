@@ -11,6 +11,6 @@
                 } else {
 
                     print "O número $numeroInt é positivo.\n";
-                    
+                     
                 }
     }
