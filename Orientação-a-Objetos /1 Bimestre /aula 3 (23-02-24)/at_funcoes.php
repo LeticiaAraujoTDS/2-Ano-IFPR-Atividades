@@ -1,25 +1,36 @@
 <?php
 
-    function verificar($a) {
+    function verificar($num) {
 
-        if (($a% 2 !== 0) && ($a % 3 !== 0) && ($a % 1 == 0) && ($a % $a == 0)) {
+            if ($num < 2) {
+                return false; 
+            }
+            
+            for ($i = 2; $i <= ($num)/2; $i++) {
+                if ($num % $i == 0) {
+                    return false; 
+                }
+            }
 
-            printf ("%d é um número primo.\n", $a);
-
-        } elseif (($a == 2) or ($a ==3)) {
-
-            printf ("%d é um número primo.\n", $a);
-
-        } else 
-
-            printf ("%d não é um número primo.\n", $a);
+        return true;
     }
 
+    /* Programa principal */
+    
     $num = 0;
 
-    do {
+    while (true) {
 
-       $num = readline("Informe um número: ");
-       verificar($num);
-       
-    } while ($num >= 2);
+        $num = readline("Informe um número para saber se é primo ou não: ");
+
+            if ($num < 2) {
+                print "Programa encerrado, pois digitou um número menor que 2.\n";
+                break;
+            }
+        
+            if (verificar($num)) {
+                print ($num . " é um número primo.\n");
+            } else {
+                print ($num . " não é um número primo.\n");
+            }
+    }
