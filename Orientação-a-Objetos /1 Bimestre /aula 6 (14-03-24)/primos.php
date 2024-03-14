@@ -2,11 +2,18 @@
 //Funcão
 function verificar($num)
 {
+    $raiz = sqrt($num);//otimizar o código usando a raiz quadrada
     //é 1 pq ele não é primo
     if ($num <= 1) {
         return false;
     }
-    for ($i = 2; $i <= ($num / 2); $i++) {
+    /*for ($i = 2; $i <= ($num / 2); $i++) {
+        if ($num % $i == 0) {
+            return false;
+        }
+    }
+    return true;*/
+    for ($i = 2; $i <= $raiz; $i++) {
         if ($num % $i == 0) {
             return false;
         }
