@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    /*o * diz que está pegando todos os elementos e colocando estes paramametros*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+
+body {
+    background: #5F6F52;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+header {
+    background: #3A4D39;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+main .conteiner {
+    text-align: center;
+    background: #5F6F52;
+    padding: 0;
+    min-height: calc(100vh - 78px - 78px);
+    /*aultura minima de toda a tela - o cabeçalho e o rodapé*/
+}
+
+footer {
+    background: #3A4D30;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.conteiner {
+    width: 80%;
+    margin: 0 auto 0 auto
+        /*top right bottom left*/
+    ;
+}
+
+/* Colunas da página inicial */
+
+aside {
+
+    width: 20%;
+    background: #A9B388;
+    float: left;
+    min-height: calc(100vh - 102px - 54px);
+}
+
+section {
+    width: 80%;
+    background: #A9B388;
+    float: left;
+}
+
+.project {
+    width: 33.33%;
+    border: solid 2px #3A4D30;
+    height: 180px;
+    float: left;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.project img {
+    max-width: 100%;
+}
