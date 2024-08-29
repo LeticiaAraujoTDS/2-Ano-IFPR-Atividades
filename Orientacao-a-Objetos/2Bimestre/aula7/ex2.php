@@ -2,12 +2,12 @@
 
 class Pessoa {
 
+    //Atributos
     private string $nome;
     private string $sobrenome;
     private int $idade;
 
     //Metodos
-
     public function __construct($a="", $b="", $c=0){
         $this->nome=$a;
         $this->sobrenome=$b;
@@ -19,37 +19,31 @@ class Pessoa {
         return $this->getNome() . " " . $this->getSobrenome() . ", " . $this->getIdade() . " anos.\n";
     }
 
-    public function getNome(): string
-    {
+    public function getNome(): string {
         return $this->nome;
     }
 
-    public function setNome(string $nome): self
-    {
+    public function setNome(string $nome): self {
         $this->nome = $nome;
 
         return $this;
     }
 
-    public function getSobrenome(): string
-    {
+    public function getSobrenome(): string {
         return $this->sobrenome;
     }
 
-    public function setSobrenome(string $sobrenome): self
-    {
+    public function setSobrenome(string $sobrenome): self {
         $this->sobrenome = $sobrenome;
 
         return $this;
     }
 
-    public function getIdade(): int
-    {
+    public function getIdade(): int {
         return $this->idade;
     }
 
-    public function setIdade(int $idade): self
-    {
+    public function setIdade(int $idade): self {
         $this->idade = $idade;
 
         return $this;
@@ -61,7 +55,7 @@ $pessoas = array();
 
 do {
     echo "\n******************************";
-    echo "\n******* Menu *****************";
+    echo "\n******* MENU *****************";
     echo "\n*** 1 - Cadastrar Pessoa *****";
     echo "\n*** 2 - Listar Pessoa ********";
     echo "\n*** 0 - Sair *****************";
@@ -71,6 +65,7 @@ do {
     echo "\n";
 
     switch ($escolha) {
+
         case '0':
             echo "Serviço encerrado.\n";
             break;
@@ -94,5 +89,7 @@ do {
         default:
             echo "\nDigite um número disponível.\n";
             break;
+
     }
+
 } while ($escolha != 0);
