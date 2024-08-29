@@ -80,7 +80,7 @@ do {
             break;
 
         case '2':
-            echo "Lista:\n\n";
+            echo "Lista de pessoas cadastradas:\n\n";
             foreach ($pessoas as $i => $p) {
                 echo ($i + 1) . " - " . $p;
             }
