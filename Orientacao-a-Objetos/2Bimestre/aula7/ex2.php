@@ -76,17 +76,18 @@ do {
             break;
 
         case '1':
-            echo "Você escolheu cadastrar uma pessoa.\n";
+            echo "Cadastro:\n\n";
             $a = readline("Qual seu 1º nome? ");
             $b = readline("Qual seu sobrenome? ");
             $c = readline("Qual a sua idade? ");
             array_push($pessoas, new Pessoa($a, $b, $c));
+            echo "Pessoa cadastrada.\n";
             break;
 
         case '2':
-            echo "Você escolheu imprimir as informações de pessoas.\n";
-            foreach ($pessoas as $p) {
-                echo $p;
+            echo "Lista:\n\n";
+            foreach ($pessoas as $i => $p) {
+                echo ($i + 1) . " - " . $p;
             }
             break;
         
