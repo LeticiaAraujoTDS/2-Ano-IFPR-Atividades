@@ -60,10 +60,12 @@ class Pessoa {
 $pessoas = array();
 
 do {
+    echo "\n******************************";
     echo "\n******* Menu *****************";
     echo "\n*** 1 - Cadastrar Pessoa *****";
     echo "\n*** 2 - Listar Pessoa ********";
-    echo "\n*** 0 - Sair *****************\n\n";
+    echo "\n*** 0 - Sair *****************";
+    echo "\n******************************\n\n";
 
     $escolha = readline("Qual serviço deseja realizar? ");
     echo "\n";
