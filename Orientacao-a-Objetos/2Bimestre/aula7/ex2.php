@@ -58,6 +58,7 @@ do {
     echo "\n******* MENU *****************";
     echo "\n*** 1 - Cadastrar Pessoa *****";
     echo "\n*** 2 - Listar Pessoa ********";
+    echo "\n*** 3 - Excluir Pessoa *******";
     echo "\n*** 0 - Sair *****************";
     echo "\n******************************\n\n";
 
@@ -85,6 +86,27 @@ do {
                 echo ($i + 1) . " - " . $p;
             }
             break;
+
+        case '3':
+            echo"Você escolheu excluir uma pessoa, a lista será exibida agora.\n\n";
+            //Listar pessoas
+            foreach ($pessoas as $i => $p) {
+                echo ($i + 1) . " - " . $p;
+            }
+            //Ler pessoa que deve ser excluída
+            $op = readline("Informe a pessoa que deseja excluir: ");
+            $op--;
+            //Excluir a pessoa
+            if ($op >= 0 && $op < count($pessoas)) {
+                #Excluir
+                array_splice($pessoas, $op, 1);
+                echo "Pessoa excluída com sucesso!";
+
+            } else 
+                echo "A pessoa escolhida não existe.\n";
+            break;
+
+
         
         default:
             echo "\nDigite um número disponível.\n";
