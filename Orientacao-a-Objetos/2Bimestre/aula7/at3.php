@@ -10,10 +10,10 @@ class Posto {
     }
     public function abastecer($litros) {
         if ($this->litrosGasolina < $litros) {
-            print "Não foi possível abastecer, pois não temos esta quantidade de gasolina no momento.\n";
+            echo "Não foi possível abastecer, pois não temos esta quantidade de gasolina no momento.\n";
             return false;
         } else {
-            print "Abastecimento realizado!";
+            echo "Abastecimento realizado!";
             $this->litrosGasolina -= $litros;
             array_push($this->abastecimentosGasolina, $litros);
             return true;
