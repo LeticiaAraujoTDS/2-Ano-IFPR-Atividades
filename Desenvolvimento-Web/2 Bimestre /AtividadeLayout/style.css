@@ -28,6 +28,7 @@ h1, h2, h3 {
 .container  {
     background: #fff;
     width: 1200px;
+    overflow: hidden;
     margin: 0 auto;
     padding: 15px;
     max-width: 100%;
@@ -71,7 +72,7 @@ h1, h2, h3 {
         background-color: var(--carrot-color);
     }
     .container {
-        width: 100%;
+        width: 90%;
     }
     .caixa-container {
         width: 100%;
