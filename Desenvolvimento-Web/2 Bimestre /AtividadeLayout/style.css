@@ -107,13 +107,4 @@ h1, h2, h3 {
     .caixa-container {
         width: 33.33%;
     }
-
-@media (min-width:993px)  {
-    .container {
-        width: 100%;
-    }
-    .caixa-container {
-        width: 100%;
-    }
-    }
 }
