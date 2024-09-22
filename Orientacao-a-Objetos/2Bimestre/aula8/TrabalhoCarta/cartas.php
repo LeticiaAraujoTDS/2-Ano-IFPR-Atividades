@@ -1,15 +1,18 @@
 <?php
 
-class Carta{
+class Carta
+{
 
   private int $numero;
   private string $nome;
 
-  public function __construct($a = 0, $b = ""){
+  public function __construct($a = 0, $b = "")
+  {
     $this->numero = $a;
     $this->nome = $b;
   }
-  public function __toString(){
+  public function __toString()
+  {
     $representacaoCartas = [
       "Carta 0" => "\n
             mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  
@@ -286,7 +289,8 @@ class Carta{
             mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  
             mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  
             mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            \n"];
+            \n"
+    ];
     return "\n" . $representacaoCartas[$this->getNome()];
   }
 
@@ -314,32 +318,16 @@ class Carta{
     return $this;
   }
 }
+//Programa principal
 //onde estão os objetos carta
 $baralho = array();
 //criando as cartas e adicionando ao baralho
-$carta0 = new Carta(0, "Carta 0");
-array_push($baralho, $carta0);
-$carta1 = new Carta(1, "Carta 1");
-array_push($baralho, $carta1);
-$carta2 = new Carta(2, "Carta 2");
-array_push($baralho, $carta2);
-$carta3 = new Carta(3, "Carta 3");
-array_push($baralho, $carta3);
-$carta4 = new Carta(4, "Carta 4");
-array_push($baralho, $carta4);
-$carta5 = new Carta(5, "Carta 5");
-array_push($baralho, $carta5);
-$carta6 = new Carta(6, "Carta 6");
-array_push($baralho, $carta6);
-$carta7 = new Carta(7, "Carta 7");
-array_push($baralho, $carta7);
-$carta8 = new Carta(8, "Carta 8");
-array_push($baralho, $carta8);
-$carta9 = new Carta(9, "Carta 9");
-array_push($baralho, $carta9);
+for ($i = 0; $i < 10; $i++) {
+  $baralho[] = new Carta($i, "Carta $i");
+}
 //escolhendo uma carta aleatória e armazenando
 $cartas = $baralho[array_rand($baralho)];
-//Programa principal
+//setando  as variáveis para usar no do-while
 $opcao = 0;
 $op = 1;
 $quantTentativas = 0;
@@ -373,25 +361,18 @@ do {
         echo "\n";
         if ($baralho[$chute] == $cartas) {
           $quantTentativas++;
-          if ($quantTentativas == 1) {
-            echo "Parabéns!!! Você acertou a carta com " . $quantTentativas . " tentativa.\n";
-            echo "A carta $chute foi a carta sorteada. Veja a  representação dela: \n" .  $cartas;
-            $acertou = true;
-          } elseif ($quantTentativas != 1) {
-            echo "Parabéns!!! Você acertou a carta com " . $quantTentativas . " tentativas.\n";
-            echo "A carta $chute foi a carta sorteada. Veja a  representação dela: \n" .  $cartas;
-            $acertou = true;
-          }
-        } elseif ($baralho[$chute] != $cartas && $chute >= 0 && $chute <= count($baralho)) {
+          echo "Parabéns!!! Você acertou a carta na tentativa " . $quantTentativas . ".\n";
+          echo "A carta $chute foi a carta sorteada. Veja a  representação dela: \n" .  $cartas;
+          $acertou = true;
+        } elseif ($baralho[$chute] != $cartas && $chute >= 0 && $chute < count($baralho)) {
           $quantTentativas++;
-          echo  "Você errou!! Tente novamente.\n";
-          $op = readline("Deseja desistir? Se SIM digite 0, se NÃO digite qualquer número.  ");
-          echo "\n";
+          echo "Você errou!! Tente novamente.\n";
+          $op = readline("Deseja desistir? Se SIM digite 0, se NÃO digite qualquer número. ");
           if ($op == 0) {
-            echo "Você escolheu desistir na tentativa " . $quantTentativas .  ". A carta sorteada foi a $chute: \n" . $cartas;
+            echo "\nVocê escolheu desistir na tentativa " . $quantTentativas .  ". A carta sorteada foi a $chute: \n" . $cartas;
             echo "\nPrograma encerrado.\n";
           } elseif ($op != 0) {
-            echo  "Você escolheu continuar. Tente adivinhar novamente!\n";
+            echo  "\nVocê escolheu continuar. Tente adivinhar novamente!\n";
           }
         } else {
           $quantTentativas++;
@@ -418,10 +399,10 @@ do {
 
     case '4':
       echo "Você escolheu receber uma dica.\n";
-      if ($chute <= 5) {
-        echo "A carta sorteada é menor ou igual a 5.\n";
+      if ($chute % 2 == 0) {
+        echo "A carta sorteada é par.\n";
       } else {
-        echo "A carta sorteada é maior do que 5.\n";
+        echo "A carta sorteada é ímpar.\n";
       }
       break;
 
