@@ -47,32 +47,40 @@
                 $carros = new Carro();
                 $carros->setModelo(readline("Informe o modelo do carro:  "));
                 $carros->setAnoFabricacao(readline("Informe o ano de fabricação do carro:  "));
-                $fabricante = readline("Informe a sigla fabricante do carro: ");
-                foreach ($fabricantes as $f) {
-                    if ($fabricante == $f->getSigla()) {
-                        $fabricante = $f;
-                        $esta = true;
+
+                do {
+                    $fabricante = readline("Informe a sigla fabricante do carro: ");
+                    foreach ($fabricantes as $f) {
+                        if ($fabricante == $f->getSigla()) {
+                            $fabricante = $f;
+                            $esta = true;
+                        }
                     }
-                }
-                if (!$esta) {
-                    echo "A fabricante " . $fabricante . " não existe.\n";
-                } 
+                    if (!$esta) {
+                        echo "A fabricante " . $fabricante . " não existe.\n";
+                    }
+                } while (!$esta);
                 $carros->setFabricante($fabricante);
-                array_push($arrayCarros, $carros);    
-                
+                array_push($arrayCarros, $carros);
+                $esta = false;
                 break;
 
             case '2':
-
+                echo "Listando os carros armazenados.\n";
+                foreach ($arrayCarros as $key => $value) {
+                    echo "Carro " . $key + 1 . ": " . $value;
+                }
                 $indice = readline("Informe o carro que deseja excluir: ");
-                $indice-= 1;
-                array_splice($arrayCarros,$indice);
+                $indice -= 1;
+                unset($arrayCarros[$indice]);
                 break;
 
             case '3':
 
-                foreach ($arrayCarros as $key => $value) {
-                    echo "Carro " . $key + 1 . ": " . $value;
+                $i = 1;
+                foreach ($arrayCarros as $value) {
+                    echo "Carro " . $i . ": " . $value;
+                    $i++;
                 }
                 break;
 
