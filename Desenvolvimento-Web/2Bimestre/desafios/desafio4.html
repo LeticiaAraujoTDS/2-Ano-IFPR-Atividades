@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+    <link rel="stylesheet" href="default.css">
+
+    <style>
+        .radius {
+            border-radius: 5px;
+        }
+        .container {
+            background-color: antiquewhite;
+            color: black;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            height: 300px;
+        }
+        .caixa {
+            background-color: rgb(71, 1, 1);
+            color: antiquewhite;
+            padding: 10px;
+            margin: 10px;
+            width: 50px;
+            text-align: center;
+            flex-grow: 1;
+            font-size: 25px;
+        }
+        .caixa:nth-child(1) {
+            align-self: flex-start;
+        }
+        .caixa:nth-child(2) {
+            align-self: stretch;
+        }
+        .caixa:nth-child(3) {
+            align-self: center;
+        }
+        .caixa:nth-child(4) {
+            align-self: end;
+        }
+        .caixa:nth-child(5) {
+            align-self:flex-start;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>Desafio</h2>
+    <div class="container radius">
+
+        <div class="caixa radius a">a</div>
+
+        <div class="caixa radius b">b</div>
+
+        <div class="caixa radius c">c</div>
+
+        <div class="caixa radius d">d</div>
+
+        <div class="caixa radius e">e</div>
+
+    </div>
+    
+</body>
+</html>
