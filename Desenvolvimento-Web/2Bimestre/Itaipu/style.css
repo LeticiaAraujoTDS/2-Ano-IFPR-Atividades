@@ -1,9 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .site {
     display: flex;
     flex-direction: column;
@@ -12,13 +12,13 @@
 .conteudo {
     width: 1320px;
     margin: 0 auto;
-    border: dotted 2px #c28080;
+    border: dotted 2px #000;
 }
-/*Cabeçalho*/
+
+/*** CABECALHO ***/
 .cabecalho {
     height: 120px;
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%)
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
 }
 
 .cabecalho .conteudo {
@@ -28,16 +28,13 @@
     justify-content: space-between;
 }
 
-.cabecalho .conteudo .logo {
+.cabecalho .conteudo .logo{
     width: 165px;
 }
 
 .cabecalho .conteudo .menus ul {
     display: flex;
     gap: 20px;
-}
 
-.cabecalho .conteudo .menus ul li{
     list-style: none;
-
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quia velit. Praesentium quos ad aperiam commodi officiis, ducimus quisquam quae expedita laboriosam totam quam. Earum vitae ea dolorum magnam deleniti.
+    </p>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consequuntur aliquam dicta incidunt magni. Neque quidem voluptates accusantium ut similique soluta nostrum modi molestiae. Quas molestiae quod fuga beatae expedita!</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consequuntur aliquam dicta incidunt magni. Neque quidem voluptates accusantium ut similique soluta nostrum modi molestiae. Quas molestiae quod fuga beatae expedita!</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consequuntur aliquam dicta incidunt magni. Neque quidem voluptates accusantium ut similique soluta nostrum modi molestiae. Quas molestiae quod fuga beatae expedita!</div>
+    <h3>Texto 1</h3>
+    <h3>Texto 2</h3>
+    <h3>Texto 3</h3>
+    <h3>Texto 4</h3>
+    <h3>Texto 5</h3>
+    <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+    <script>
+        
+        let paragrafo = document.getElementsByTagName('p')
+
+        paragrafo[0].innerText = "Olá mundo!"
+
+        console.log(paragrafo)
+
+        let corFundo = document.getElementsByClassName('abc')
+
+        corFundo[0].style.backgroundColor = "blue"
+        corFundo[1].style.backgroundColor = "blue"
+        corFundo[2].style.backgroundColor = "blue"
+
+        console.log(corFundo)
+
+        let frase = document.getElementsByTagName('h3')
+
+        frase[2].innerText = "Texto alterado!"
+
+        let lista = document.querySelector('li').style.backgroundColor = "red"
+
+    </script>
+
+</body>
+</html>
