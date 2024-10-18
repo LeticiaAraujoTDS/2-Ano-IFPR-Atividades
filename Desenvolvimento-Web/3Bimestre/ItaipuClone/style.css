@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    height: 120px;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
+}
+
+.cabecalho .conteudo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .conteudo .logo {
+    max-width: 165px;
+}
+
+.cabecalho .conteudo .menus ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    font-weight: 100;
+    scale: 0.9;
+    
+} 
+
+.cabecalho .conteudo .menus ul li:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)) a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #9b9b9b;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 100px;
+    font-size: 18px;
+    line-height: 18px;
+    transition: all 0.4s ease-out;
+  
+}
+
+.cabecalho .conteudo .menus ul li:not(:nth-child(1)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)) a:hover{
+    color: #9b9b9b;
+    background-color: transparent;
+    transition: all 0.4s ease-out;
+    transform: scale(1.3);
+}
+
+.cabecalho .conteudo .menus ul li a:hover{
+    background-color: transparent;
+    color: #9b9b9b;
+    transition: all 0.2s ease-out;
+}
+
+.cabecalho .conteudo .menus ul li:nth-child(6) a{
+    margin-left: 30px;
+    display: flex;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #9b9b9b;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .conteudo .menus ul li:nth-child(6) a:hover {
+    color: #9b9b9b;
+    background-color: transparent;
+    transition: all 0.2s ease-out;
+}
+
+.cabecalho .conteudo .menus ul li:nth-child(7) a{
+    color: #fff;
+    border: #0082c4 solid 1px;
+    background-image: linear-gradient(180deg, #0082c4 0%, #003c6a 100%);
+    margin-left: 30px;
+    display: flex;
+    transition: all 0.2s ease-out;
+    border-radius: 100px;
+    text-decoration: none;
+    padding: 8px 13px 8px 13px;
+}
+
+.cabecalho .conteudo .menus ul li:nth-child(7) a:hover {
+    color: #0082c4;
+    background-image: none;
+}
+
+
+.bi-search {
+    background-color: #E4E4E4;
+    border: 2px solid #9B9B9B;
+    color: #9B9B9B;
+    display: inline-flex;
+    justify-content: center; 
+    border-radius: 100px; 
+    font-size: 18px;
+    cursor: pointer;
+    margin: 3px 30px;
+    text-align: center;
+    padding: 5px;
+    line-height: 18px;
+}
+
+/*MENU*/
+
+.menu {
+    height: 60px;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
+    display: flex;
+}
+
+.menu .conteudo {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    flex-basis: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+
+.menu ul li a{
+    text-decoration: none;
+    color: #003C6A;
+    font-weight: 450;
+    padding: 20px;
+}
+
+.menu ul li a:hover{
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #0082c4;
+}
+
+/*BANNER*/
+
+.banner img {
+    width: 100%;
+    display: flex;
+}
+
+/*NOTICIAS*/
+
+.noticias-competencias {
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+}
+
+.noticias-competencias h2{
+    color: #fff;
+    font-weight: 500;
+    margin-top: 80px;
+    font-size: 28px;
+}
+
+.conteudo-noticias {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*CARD NOTICIAS*/
+
+.card-noticias {
+    flex-basis: 24%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #005CAAC7;
+}
+
+.card-noticias .card-noticias-data {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    background-color: #00315eec;
+    color: #50c4ff;
+    font-weight: 400;
+    transition: all 0.2s ease-out;
+}
+
+.card-noticias .card-noticias-imagem:hover .card-noticias-data {
+    top: 220px;
+}
+
+.card-noticias .card-noticias-imagem {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-noticias .card-noticias-imagem img{
+    width: 100%;
+    transition: all 0.4s ease-out;
+}
+
+.card-noticias .card-noticias-imagem:hover img{
+    transform: scale(1.1);
+}
+
+.card-noticias-texto {
+    color: #003C6A;
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 22px;
+    padding: 15px;
+}
+
+.card-noticias .dif {
+    margin-top: 20px;
+}
+
+.card-noticias .leia-mais .btn {
+    background-color: #EBEBEB;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: #0082c4;
+    font-style: italic;
+    font-weight: 200;
+    float: right;
+    margin-right: 20px;
+}
+
+.card-noticias .leia-mais .btn:hover {
+    color: #ffffff;
+    background-color: #0082c4;
+}
+
+.noticias-competencias .veja-mais a{
+    float: right;
+    padding: 5px 10px;
+    margin: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*COMPETENCIAS*/
+.competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.competencias .card-competencias {
+    flex-basis: 422px;
+    height: 305px; 
+    margin-bottom: 10px;
+    background-color: transparent;
+    position: relative; 
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.competencias .card-texto {
+    position: absolute; 
+    top: 80%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+
+}
+
+.competencias img {
+    width: 422px; 
+    height: 305px; 
+    display: block;
+    border-radius: 20px;
+}
+
+.competencias img:hover {
+    transition: all 0.7s ease-out;
+    transform: scale(1.2);
+}
+
+/*OPORTUNIDADES*/
+.transicao img{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+.oportunidades{
+    width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 300px;
+    background-color: white;
+}
+.oportunidades .conteudo-oportunidades h2{
+    color: #003C6A;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 100px;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+.itens-oportunidades{
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+.itens-oportunidades .card-oportunidades{
+    flex-basis: 24%; 
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    height: 600px;
+}
+
+.itens-oportunidades .card-oportunidades h1{
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+#yellow{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Cursos_Banners_01.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+}
+
+#amarelo{
+    background-color: #FCA51A;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+}
+
+#verde{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Editais_Banners_04.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+}
+
+#green{
+    background-color: #B8CB33;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+}
+
+#cyan{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Ecossistema_Banners-03.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+}
+
+#ciano{
+    background-color: #00ABAF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+}
+
+#vermelho{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Facaparte_Banners-04.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+}
+
+#red{
+    background-color: #E12843;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+}
+.itens-oportunidades .card-oportunidades .card-oportunidade-conteudo{
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.imagem img{
+    width: 20%; 
+    height: auto;
+}
+
+.card-oportunidade-conteudo .imagem{
+    display: flex; 
+    align-items: center;    
+    color: white;
+}
+
+.card-oportunidade-conteudo .imagem .bloco-oportunidades{
+    margin-left: 20px;
+}
+
+.card-oportunidade-conteudo:hover{
+    transition: all 0.5s ease-out;
+    transform: scale(1.1);
+}
+
+footer{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #052441 0%, #000825 100%);
+    color: #00315E;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+footer .imagem{
+    text-align: left;
+    margin-left: 20px;
+}
+
+footer .imagem img{
+    width: 15%; 
+    height: auto;
+}
+
+footer .link-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .link-icons .quebra{
+    flex-wrap: wrap;
+}
+
+footer .link-icons ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+footer .link-icons ul .icons-footer {
+    text-align: left;
+}
+
+.fundo-footer .icons-footer {
+    background-color: #0082C4;
+    border-radius: 50px;
+    padding: 8px;
+    color: #00315E;
+}
+
+.fundo-footer .icons-footer:hover {
+    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #0082C4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0082C4;
+    transform: scale(0.9);
+    transition: all 0.5s ease-out;
+}
+
+footer .links-footer{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+
+footer .links-footer .links-final a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+footer .links-footer .links-final a:hover{
+    color: #0082C4;
+}
+
+.retornar-topo {
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 220px;
+}
+
+.retornar-topo .topo .voltar {
+    background-color: white;
+    color: #003C6A;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.retornar-topo .topo .voltar:hover {
+    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #0082C4;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0082C4;
+    transition: all 0.3s ease-out;
+    transform: scale(1.3);
+    font-size: 18px;
+}
+
+footer .text{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3em;
+    font-size: 14px;
+}
+
+footer .cadastre{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 70px;
+}
+footer .cadastre .button{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #0082C4 0%, #003C6A 100%);
+    color: white;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #0082C4;
+    padding: 5px 15px;
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 13px;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+footer .cadastre .button:hover{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00082500 0%, #00082500 100%);
+    color: #0082C4;
+    transition: all 0.5s ease-out;
+}
+
+footer .direito-autorais p{
+    font-size: 12px;
+    line-height: 15px;
+}
