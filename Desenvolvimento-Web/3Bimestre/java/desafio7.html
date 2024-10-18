@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>10</h1>
+    <button>iniciar contagem regressiva</button>
+    <script>
+        contador = 10;
+        const button = document.querySelector('button');
+        const regressiva = document.querySelector('h1');
+        let interval = setInterval(()=>{
+            regressiva.innerText = contador;
+            contador--;
+            if (contador == -1) {
+                clearInterval(interval);
+            };
+        }, 1000);
+        button.addEventListener('click', interval);
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <p></p>
+
+    <script>
+        const input = document.querySelector('input');
+        const texto = document.querySelector('p');
+        input.addEventListener('keydown', ()=>{
+            let textinhoDigitado = input.value;
+            if (textinhoDigitado == "chocolate") {
+                texto.innerText = "Eu amo sorvete!";
+            };})
+    </script>
+    
+    
+</body>
+</html>

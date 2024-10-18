@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>clique aqui!</button>
+    
+    <p></p>
+
+    <input type="text">
+    <p></p>
+
+    <script>
+        let numeroCliques = 0;
+        const botao = document.querySelector('button');
+        const textos = document.querySelectorAll('p');
+        const input = document.addEventListener('click', ()=>{
+            let bgColor = 'rgb(' + Math.random() * 255 + ',' +Math.random() * 255 + ',' + Math.random() * 255 + ')';
+            document.body.style.backgroundColor = bgColor;
+        });
+        
+
+
+        //função anonima
+        //pode substituir "function () {}" por "()=>{}"
+        botao.addEventListener('click', ()=>{
+            console.log("clicou");
+            numeroCliques++;
+            textos[0].innerText = "O botão foi clicado: " + numeroCliques + " vezes.";
+        });
+
+        input.addEventListener('keydown', ()=>{
+            let textoDigitado = input.value;
+            if (textoDigitado == "calabresa") {
+                textos[1].innerText = "Um sabor clássico";
+            } else if (textoDigitado == "frango com catupiry") {
+                textos[1] = "Um sabor que divide opiniões";
+            } else {
+                textos[1] = "Seu gosto é peculiar";
+            }
+            textos[1].innerText = input.value;
+        })
+        
+    </script>
+
+</body>
+</html>
