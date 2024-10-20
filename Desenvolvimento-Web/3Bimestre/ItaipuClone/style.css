@@ -72,22 +72,17 @@
     transition: all 0.2s ease-out;
 }
 
-.cabecalho .conteudo .menus ul li:nth-child(6) a{
-    margin-left: 30px;
-    display: flex;
-    border-radius: 100px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #9b9b9b;
-    display: flex;
-    align-items: center;
-}
 
-.cabecalho .conteudo .menus ul li:nth-child(6) a:hover {
-    color: #9b9b9b;
+.cabecalho .conteudo .menus ul li:nth-child(6) a:hover{
     background-color: transparent;
+    color: #9b9b9b;
     transition: all 0.2s ease-out;
 }
+
+.cabecalho .conteudo .menus ul li:nth-child(6) a{
+    margin-left: 30px;
+}
+
 
 .cabecalho .conteudo .menus ul li:nth-child(7) a{
     color: #fff;
@@ -318,14 +313,13 @@
 .oportunidades{
     width: 1320px;
     margin: 0 auto;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     background-color: white;
 }
 .oportunidades .conteudo-oportunidades h2{
     color: #003C6A;
     font-weight: 900;
     font-size: 30px;
-    margin-top: 100px;
     padding: 10px 0px;
     margin-bottom: 20px;
 }
@@ -349,70 +343,6 @@
     color: white;
     margin-top: 40px;
     margin-bottom: 25px;
-}
-
-#yellow{
-    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Cursos_Banners_01.png');
-    background-size: cover;
-    background-position: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FFFC77;
-}
-
-#amarelo{
-    background-color: #FCA51A;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FFFC77;
-}
-
-#verde{
-    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Editais_Banners_04.png');
-    background-size: cover;
-    background-position: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #E9FF77;
-}
-
-#green{
-    background-color: #B8CB33;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #E9FF77;
-}
-
-#cyan{
-    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Ecossistema_Banners-03.png');
-    background-size: cover;
-    background-position: center; 
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00F9FF;
-}
-
-#ciano{
-    background-color: #00ABAF;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00F9FF;
-}
-
-#vermelho{
-    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Facaparte_Banners-04.png');
-    background-size: cover;
-    background-position: center; 
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FF687D;
-}
-
-#red{
-    background-color: #E12843;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FF687D;
 }
 .itens-oportunidades .card-oportunidades .card-oportunidade-conteudo{
     border-radius: 50px;
@@ -440,4 +370,138 @@
 .card-oportunidade-conteudo:hover{
     transition: all 0.5s ease-out;
     transform: scale(1.1);
+}
+
+#yellow{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Cursos_Banners_01.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+    max-width: 311px;
+    max-height: 600px;
+}
+
+#amarelo{
+    background-color: #FCA51A;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FCA51A;
+}
+
+#green{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Editais_Banners_04.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+    max-width: 311px;
+    max-height: 600px;
+}
+
+#verde{
+    background-color: #B8CB33;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #B8CB33;
+}
+
+#cyan{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Ecossistema_Banners-03.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+    max-width: 311px;
+    max-height: 600px;
+}
+
+#ciano{
+    background-color: #00ABAF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00ABAF;
+}
+
+#red{
+    background-image: url('https://www.itaipuparquetec.org.br/wp-content/uploads/2023/11/Oportunidades_Facaparte_Banners-04.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+    max-width: 311px;
+    max-height: 600px;
+}
+
+#vermelho{
+    background-color: #E12843;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E12843;
+}
+
+/*Footer*/
+.col-2 {
+    width: 16.66%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-6 {
+    width: 50%;
+}
+.conteudo-footer{
+    display: flex;
+    height: 433px;
+    background-color: #00315E;
+    padding: 20px;
+}
+.conteudo-footer  img{
+    height: 118px;
+    width: 210px;
+}
+
+.conteudo-footer .links-icons  ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    font-weight: 100;
+    scale: 0.9;
+    flex-direction: row;
+} 
+
+.conteudo-footer  .links-icons ul li a{
+    text-decoration: none;
+    color: #00315E;
+    background-color: #0082C4;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 100px;
+    font-size: 18px;
+    line-height: 18px;
+    transition: all 0.4s ease-out;
+}
+
+.conteudo-footer  .links-icons ul li a:hover{
+    color: #0082C4;
+    background-color: #00315E;
+    border: solid 1px #0082C4;
+    transition: all 0.6s ease-out;
+    transform: scale(1.1);
+}
+
+.conteudo-footer .contatos{
+    color: #FFFFFF;
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.conteudo-footer .coluna-1{
+    justify-content: flex-start;
 }
