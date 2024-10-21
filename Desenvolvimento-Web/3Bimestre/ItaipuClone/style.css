@@ -308,7 +308,7 @@
 .transicao img{
     width: 100%;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
 }
 .oportunidades{
     width: 1320px;
@@ -381,6 +381,7 @@
     border-color: #FFFC77;
     max-width: 311px;
     max-height: 600px;
+
 }
 
 #amarelo{
@@ -457,7 +458,7 @@
 .conteudo-footer{
     display: flex;
     height: 433px;
-    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
     padding: 20px;
 }
 .conteudo-footer  img{
@@ -470,7 +471,6 @@
     list-style: none;
     gap: 10px;
     font-weight: 100;
-    scale: 0.9;
     flex-direction: row;
 } 
 
