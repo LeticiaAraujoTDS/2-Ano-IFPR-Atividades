@@ -3,8 +3,8 @@ use atividade1;
 create table ator
 ( 
 	CodAtor varchar(3) primary key,
-    NomeArtistico varchar(40) not null,
-    NomeReal varchar(40) not null,
+    	NomeArtistico varchar(40) not null,
+    	NomeReal varchar(40) not null,
 	Nacionalidade varchar(20) not null,
 	Sexo char(1) not null,
 	Idade int(2) not null,
@@ -25,7 +25,7 @@ create table personagem
 	CodAtor varchar(3) not null,
 	Personagem varchar(40) not null,
 	Cache int(15) not null,
-    foreign key(CodFilme) references filme(CodFilme),
+    	foreign key(CodFilme) references filme(CodFilme),
 	foreign key(CodAtor) references ator(CodAtor)
 );
 
