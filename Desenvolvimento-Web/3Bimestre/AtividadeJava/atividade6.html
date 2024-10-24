@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .conteudo {
+            flex-direction: row;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(122, 188, 255);
+            border-radius: 5px;
+
+        }
+
+        .p {
+            height: auto;
+            width: auto;
+            border: solid 1px black;
+            background-color: rgb(205, 205, 205);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gerador de Nome de Aventuras</h1>
+    <div class="conteudo">
+        <button>Gerar um nome</button>
+        <p></p>
+    </div>
+
+    <script>
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+        const botao = document.getElementsByTagName('button');
+        const texto = document.getElementsByTagName('p');
+        botao[0].addEventListener('click', () => {
+            let n1 = parseInt(Math.random() * (titles.length));
+            let n2 = parseInt(Math.random() * (names.length));
+            let n3 = parseInt(Math.random() * (classes.length));
+            let n4 = parseInt(Math.random() * (locations.length));
+
+            texto[0].innerText = titles[n1] + " " + names[n2] + ", " + classes[n3] + " de " + locations[n4] + ".";
+        
+        })
+    </script>
+</body>
+
+</html>

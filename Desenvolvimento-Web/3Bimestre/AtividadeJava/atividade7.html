@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <h1>Waddles</h1>
+    <img src="https://i.pinimg.com/originals/24/3d/28/243d282202e9beeb17c980af06a6bc06.png" alt="">
+    <p></p>
+
+    <script>
+        const imagem = document.getElementsByTagName('img');
+        const texto = document.getElementsByTagName('p');
+
+        imagem[0].addEventListener('mouseenter', () => { 
+            console.log("O mouse deu enter!");
+            texto[0].innerText = "Para de clicar em mim!!!";
+        } )
+        imagem[0].addEventListener('mouseleave', () => { 
+            console.log("O mouse saiu da imagem!");
+            texto[0].innerText = "Volta aqui! O carinho estava bom!";
+        } )
+        imagem[0].addEventListener('mousemove', () => { 
+            console.log("O mouse se mexeu!");
+            texto[0].innerText = "Para de se mexer!";
+        } )
+        imagem[0].addEventListener('click', () => { 
+            console.log("O mouse deu click!");
+            texto[0].innerText = "Woinc!!";
+        } )
+
+
+    </script>
+</body>
+</html>

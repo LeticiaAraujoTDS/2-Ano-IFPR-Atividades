@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+
+<body>
+
+    <input type="text">
+    <p></p>
+    <button>Modo Escuro</button>
+
+    <script>
+        const input = document.querySelector('input');
+        const texto = document.querySelector('p');
+        const botao = document.getElementsByTagName('button');
+        input.addEventListener('keyup', () => {
+
+            let textoDigitado = input.value;
+            let tamanhoTexto = input.length;
+
+            if (textoDigitado == "chocolate") {
+                texto.innerText = "Eu amo sorvete de chocolate!"
+            } else if (textoDigitado == "flocos") {
+                texto.innerText = "Ahh, mas chocolate é o meu favorito..."
+            } else {
+                texto.innerText = "Ahh, eu esperava um sabor de sorvete . . . "
+            }
+        });
+        botao[0].addEventListener('click', () => {
+            document.body.style.backgroundColor = "black";
+            texto.style.color = "white";
+        });
+
+    </script>
+
+</body>
+
+</html>

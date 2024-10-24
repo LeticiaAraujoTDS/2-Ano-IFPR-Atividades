@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Crie um botão que, ao ser clicado, crie e insira um novo item de lista (<li>) em uma lista
+        existente na página. Use o método document.createElement( ) para criar um novo elemento e
+        método appendChild( ) para inserir o elemento recém criado na lista -->
+
+    <button> + </button>
+
+
+    <script>
+        let contador = 0;
+        const lista = document.getElementsByTagName('li');
+        const botao = document.querySelector('button');
+        botao.addEventListener('click', () => {
+            console.log("clicou");
+            contador++;
+            const adicionar = document.createElement("li");
+            adicionar.textContent = contador;
+            document.body.appendChild(adicionar);
+        });
+    </script>
+
+</body>
+
+</html>

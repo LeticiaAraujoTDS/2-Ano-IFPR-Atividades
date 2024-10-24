@@ -33,7 +33,7 @@
             textos[0].innerText = "O botão foi clicado: " + numeroCliques + " vezes.";
         });
 
-        input.addEventListener('keydown', ()=>{
+        input.addEventListener('keyup', ()=>{
             let textoDigitado = input.value;
             if (textoDigitado == "calabresa") {
                 textos[1].innerText = "Um sabor clássico";
