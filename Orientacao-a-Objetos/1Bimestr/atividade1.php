@@ -6,7 +6,7 @@ class Animal{
     public $tipoPele;
     public $especie;
 
-    function __construct($especie, $numeroPatas, $tipoPele){
+    function Funcao($especie, $numeroPatas, $tipoPele){
         $this->especie = $especie;
         $this->numeroPatas = $numeroPatas;
         $this->tipoPele = $tipoPele; 

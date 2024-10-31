@@ -1,7 +1,7 @@
 <?php
 
 //1- Declarar a classe Veiculo
-class Veiculo {
+class Veiculos {
     private $capacidade;
     private $passagensVendidas;
 
@@ -54,7 +54,7 @@ class Veiculo {
 
 //2- Ler a capacidade do veículo e criar o objeto
 $capacidade = readline("Informe a capacidade do veículo: ");
-$onibus = new Veiculo($capacidade);
+$onibus = new Veiculos($capacidade);
 
 while (true) {
     echo "\n";
