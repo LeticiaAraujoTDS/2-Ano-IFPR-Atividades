@@ -1,13 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- TEM QUE ESTAR NA PASTA HTML PARA FUNCIONAR -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 10</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+
+        .erro {
+            display: none;
+            /* nem carrega a informação, e não pesa a página */
+            /* visibility: hidden; carrega  a informação */
+            color: rgb(252, 152, 152);
+        }
+
+        .grupo {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 20%;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input.invalido {
+            border: solid 1px rgb(186, 7, 7);
+            color: rgb(186, 7, 7);
+        }
+        .alternarSenha {
+            display: block;
+            color: black;
+            background-color: aliceblue;
+            padding: 8px;
+        }
+    </style>
 </head>
+
 <body>
-    
-    
+    <form action="">
+        <div class="grupo">
+            <input type="text" placeholder="Informe o seu nome">
+            <span class="erro">O nome deve ter pelo menos três caracteres . . . </span>
+        </div>
+
+        <div class="grupo">
+            <input type="text" placeholder="Informe o seu e-mail">
+            <span class="erro">O e-mail deve ser um e-mail válido . . . </span>
+        </div>
+
+        <div class="grupo">
+            <input type="password" placeholder="Informe sua senha">
+            <span class="erro">A senha precisa ter 8 caracteres . . . </span>
+            <button class="alternarSenha"><i class="bi bi-eye"></i></button>
+        </div>
+
+        <div class="grupo">
+            <input type="password" placeholder="Confirme sua senha">
+            <span class="erro">A confirmação não corresponde á senha</span>
+        </div>
+        <div class="grupo">
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const erros = document.querySelectorAll('.erro'); //tem como selecionr pela classe;
+
+
+        function mostrarErro(inputs, erros) {
+            erros.style.display = 'block';
+            inputs.classList.toggle('invalido');
+        }
+
+        function esconderErro(inputs, erros) {
+            console.log("Digitou + de 3");
+            erros.style.display = 'none';
+        }
+
+        //ClassList
+        //Tem 3 métodos
+        //const[].classList.add('nome') => adiciona
+        //const[].classList.remove('nome') => remove
+        //const[].classList.toggle('nome') => alternar entre adicionar e removar a classe, se existe ele tira e se não ele cria
+        function validarNome() {
+            if (inputs[0].value.length < 3) {
+                console.log("Digitou");
+                mostrarErro(inputs[0], erros[0]);
+            } else {
+                esconderErro(inputs[0], erros[0]);
+            }
+        }
+
+        function validarEmail() {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailRegex.test(inputs[1].value)) {
+                console.log("E-mail errado")
+                mostrarErro(inputs[1], erros[1]);
+            } else {
+                esconderErro(inputs[1], erros[1]);
+            }
+        }
+
+        function validarSenha() {
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            if (!senhaRegex.test(inputs[2].value)) {
+                console.log("Senha inválida")
+                mostrarErro(inputs[2], erros[2]);
+            } else {
+                esconderErro(inputs[2], erros[2]);
+            }
+        }
+
+        function confirmarSenha() {
+            if (inputs[3].value != inputs[2].value) {
+                console.log("A senha não está igual");
+                mostrarErro(inputs[3], erros[3]);
+            } else {
+                console.log("Senha confirmada!");
+                esconderErro(inputs[3], erros[3]);
+            }
+        }
+        
+
+
+
+        inputs[0].addEventListener('input', validarNome);
+        inputs[1].addEventListener('input', validarEmail);
+        inputs[2].addEventListener('input', validarSenha);
+        inputs[3].addEventListener('input', confirmarSenha);
+
+        document.querySelector('form').addEventListener('submit', (evento)=>{
+
+            evento.preventDefault();
+
+            validarNome();
+            validarEmail();
+            validarSenha();
+            confirmarSenha();
+        });
+
+        document.querySelector('.alternarSenha').addEventListener('click', ()=> {
+            const tipoAtual = inputs[2].getAttribute('type');
+            const tipo = tipoAtual === 'password' ? 'text' : 'password';
+            //hack para encurtar o if, se este tipo for verdadeiro, passe para aquele tipo, senão volte para o seu tipo anterior
+            inputs[2].setAttribute('type', tipo); //setando o atributo, para mudar o tipo do input
+        });
+        //não pode usar o () na função, pq se fizer isso ela vai ser executada toda vez;
+    </script>
 </body>
+
 </html>
