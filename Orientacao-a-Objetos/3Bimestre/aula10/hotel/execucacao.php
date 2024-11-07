@@ -43,8 +43,8 @@ do{
                     $espacoHotel->setNome(readline("Informe o nome do Hotel: "));
                     $espacoHotel->setEndereco(readline("Informe o endereco do Hotel: "));
                     $espacoHotel->setNumeroEstrelas(readline("Informe o numero de estrelas: "));
-                    $cafeIn = readline("Informe se o hotel tem café da manha incluso (s/n): ");
-                    if ($cafeIn == "s") {
+                    $cafeIn = readline("Informe se o hotel tem café da manha incluso (1- Sim ou 2- Não): ");
+                    if ($cafeIn == 1) {
                         $espacoHotel->setCafeIncluso(true);
                     } else {
                         $espacoHotel->setCafeIncluso(false);
