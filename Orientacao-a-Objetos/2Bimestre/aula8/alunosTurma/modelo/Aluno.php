@@ -9,7 +9,7 @@ class Aluno {
     private Turma $turma;
 
     public function __toString(){
-        return $this->getNome() . " - " . $this->getIdade() . ", da turma " . $this->getTurma()->;
+        return $this->getNome() . " - " . $this->getIdade() . ", da turma " . $this->getTurma();
     }
 
     /**

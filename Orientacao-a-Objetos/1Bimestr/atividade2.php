@@ -7,7 +7,7 @@ class Pokemon {
     public $ataque;
     public $defesa;
     public $velocidade;
-    public nivel;
+    public $nivel;
 
     function __construct($nome, $tipo, $ataque, $defesa, $velocidade, $nivel){
         $this->nome = $nome;
