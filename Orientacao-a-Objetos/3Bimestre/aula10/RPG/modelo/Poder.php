@@ -10,7 +10,8 @@ class Poder {
         $this->forca = $b;
     }
     public function getForcaTotal(int $forcaMago): float{
-        return $this->forca > 0 ? $forcaMago + ($forcaMago * ($this->forca/100)) : $forcaMago;
+        $forcaTotal = ($forcaMago * $this->forca / 100) + $forcaMago;
+        return $forcaTotal;
     }
     /**
      * Get the value of descricao
