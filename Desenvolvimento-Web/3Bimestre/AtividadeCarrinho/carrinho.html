@@ -68,10 +68,10 @@
 
         for (let i = 0; i < elementosNoCarrinho; i++) {
             
-            criarItemCarrinho();
+            criarItemCarrinho(carrinho[i]);
         }
 
-        function criarItemCarrinho() {
+        function criarItemCarrinho(produto) {
             
             let itemCarrinho = document.createElement('div');
             itemCarrinho.classList.add = 'item-carrinho';
@@ -85,12 +85,10 @@
             itemInfo.classList.add = 'item-info';
 
             let nomeProduto = document.createElement('h2');
-            nomeProduto.classList.add = 'teste';
-            nomeProduto.innerText = 'teste';
+            nomeProduto.classList.add = produto.nome;
 
             let precoProduto = document.createElement('p');
-            precoProduto.classList.add = 'preco';
-            precoProduto.textContent = '10,00';
+            precoProduto.classList.add = produto.preco;
 
             itemInfo.appendChild(nomeProduto);
             itemInfo.appendChild(precoProduto);
