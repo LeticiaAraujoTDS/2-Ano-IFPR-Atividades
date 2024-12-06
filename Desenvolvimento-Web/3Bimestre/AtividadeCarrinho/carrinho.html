@@ -86,6 +86,7 @@
 
             let nomeProduto = document.createElement('h2');
             nomeProduto.classList.add = 'teste';
+            nomeProduto.innerText = 'teste';
 
             let precoProduto = document.createElement('p');
             precoProduto.classList.add = 'preco';
@@ -97,7 +98,7 @@
             itemCarrinho.appendChild(item);
 
             let carrinho = document.querySelector('.carrinho');
-            carrinho.appendChild('itemCarrinho');
+            carrinho.appendChild(itemCarrinho);
         }
 
 
