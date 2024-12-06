@@ -62,7 +62,14 @@
         let carrinho = localStorage.getItem("carrinho");
         
         carrinho = JSON.parse(carrinho);
-        console.log(carrinho)
+        console.log(carrinho);
+
+        elementosNoCarrinho = carrinho.length;
+
+        for (let i = 0; i < elementosNoCarrinho; i++) {
+            
+            criarItemCarrinho();
+        }
 
         function criarItemCarrinho() {
             
@@ -88,6 +95,9 @@
             itemInfo.appendChild(precoProduto);
             item.appendChild(itemInfo);
             itemCarrinho.appendChild(item);
+
+            let carrinho = document.querySelector('.carrinho');
+            carrinho.appendChild('itemCarrinho');
         }
 
 
