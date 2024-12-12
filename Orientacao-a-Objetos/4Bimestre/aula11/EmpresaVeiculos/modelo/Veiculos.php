@@ -6,6 +6,7 @@ abstract class Veiculos{
     private int $kmRodados;
 
     abstract public function calcularTotal();
+    abstract public function getTipo();
 
     public function __construct($a = 0.0, $b = 0.0 , $c = 0)
     {

@@ -19,7 +19,7 @@ switch ($escolha) {
         $carro->setValorAluguel(readline("Informe o valor do aluguel: "));
         $carro->setValorAdicional(1.50);
         $carro->setKmRodados(readline("Informe quantos quilômetros irá andar com o veículo: "));
-        echo $carro->calcularTotal();
+        echo $carro;
         break;
 
     case '2':
@@ -27,7 +27,7 @@ switch ($escolha) {
         $van->setValorAluguel(readline("Informe o valor do aluguel: "));
         $van->setValorAdicional(2.10);
         $van->setKmRodados(readline("Informe quantos quilômetros irá andar com o veículo: "));
-        echo $van->calcularTotal();
+        echo $van;
         break;
 
     case '3':
@@ -35,7 +35,7 @@ switch ($escolha) {
         $microOnibus->setValorAluguel(readline("Informe o valor do aluguel: "));
         $microOnibus->setValorAdicional(2.75);
         $microOnibus->setKmRodados(readline("Informe quantos quilômetros irá andar com o veículo: "));
-        echo $microOnibus->calcularTotal();
+        echo $microOnibus;
         break;
 
     case '4':
@@ -43,7 +43,7 @@ switch ($escolha) {
         $onibus->setValorAluguel(readline("Informe o valor do aluguel: "));
         $onibus->setValorAdicional(4.20);
         $onibus->setKmRodados(readline("Informe quantos quilômetros irá andar com o veículo: "));
-        echo $onibus->calcularTotal();
+        echo $onibus;
         break;
 
     default:
