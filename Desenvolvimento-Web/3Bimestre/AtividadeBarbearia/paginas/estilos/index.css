@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+/* #5b0606 
+#c9c498 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', 'Sans-serif';
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+
+}
+
+/* Menu PC */
+.conteudo-header {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho-pc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    width: 200px;
+    margin-right: 20px;
+}
+
+
+.menu-pc ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-pc ul li {
+    margin: 0 15px;
+}
+
+.menu-pc a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu-pc a:hover {
+    color: rgb(248, 161, 161);
+    transform: scale(1.1);
+}
+
+.botao-agendamento button {
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: rgb(84, 5, 5);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.botao-agendamento button:hover {
+    background-color: rgb(248, 161, 161);
+}
+
+/* MENU CELULAR */
+
+.overlay-menu {
+    background-color: rgba(135, 95, 95, 0.156);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+
+.menu-celular {
+    background-color: rgb(131, 5, 5);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 0;
+    overflow: hidden;
+}
+
+.botao-menu {
+    display: none;
+}
+
+
+.menu-celular nav ul {
+    text-align: right;
+    padding-top: 20%;
+    padding-right: 5%;
+}
+
+.menu-celular nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 15px 0;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-celular nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    transition: all 0.8s ease-out;
+}
+
+.menu-celular .botao-fechar {
+    padding: 5% 5%;
+}
+
+
+
+.menu-celular button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #390101;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+/* Formulario */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.aberto {
+    display: flex;
+}
+
+.conteudo-modal {
+    background-color: #370000;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.conteudo-modal h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.conteudo-modal form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.conteudo-modal form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.conteudo-modal form input,
+.conteudo-modal form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    background-color: #f4d2d2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    color: #000;
+}
+
+.conteudo-modal form button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #813434;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.conteudo-modal form button:hover {
+    background-color: #512f2f;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/*Conteudo*/
+.conteudo {
+    width: 100%;
+    padding-top: 5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: row;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-family: 'Merriweather';
+}
+.conteudo-esquerda,
+.conteudo-direita {
+    width: 50vw;
+    padding: 0 10px;
+}
+
+.conteudo-direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.conteudo-esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    padding: 0 80px;
+    border-radius: 10px;
+    background-color: #390101;
+    
+}
+
+.conteudo-direita img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.conteudo-esquerda h2,
+.conteudo-esquerda p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 1020px) {
+    .botao-menu {
+        display: block;
+    }
+
+    .menu-pc,
+    .botao-agendamento {
+        display: none;
+    }
+
+    header {
+        padding: 20px 4%;
+
+    }
+
+    header.logo img {
+        width: 50px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+    }
+
+    .conteudo-esquerda,
+    .conteudo-direita {
+        width: 90%;
+    }
+    .conteudo-direita {
+        padding-top: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo-direita img {
+        align-items: center;
+        justify-content: center;
+    }
+}
