@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagens/png" href="../imagens/icons/icon-bar-branco.ico">
+    <link rel="stylesheet" href="../paginas/estilos/index.css">
+    <link rel="stylesheet" href="../paginas/estilos/servicos.css">
+    <title>Barbearia Rosso</title>
+</head>
+<body>
+    <header>
+        <div class="conteudo-header">
+            <div class="cabecalho-pc">
+                <div class="logo">
+                    <a href="../paginas/index.html">
+                        <img src="../imagens/gifs/logo-preta.gif" alt="">
+                    </a>
+                </div>
+                <nav class="menu-pc">
+                    <ul>
+                        <li><a href="../paginas/index.html">HOME</a></li>
+                        <li><a href="../paginas/servicos.html">SERVIÇOS</a></li>
+                        <li><a href="../paginas/trabalhos.html">TRABALHOS</a></li>
+                        <li><a href="../paginas/funcionarios.html">FUNCIONÁRIOS</a></li>
+                        <li><a href="../paginas/historico.html">HISTÓRICO DE AGENDAMENTOS</a></li>
+                        <li><a href="#" class="botao-agendamento"> <button onclick="abrirModal()">AGENDAR
+                                    HORÁRIO</button></a></li>
+                    </ul>
+                </nav> <!-- fim navbar para pc -->
+            </div> <!-- fim div cabecalho-pc -->
+
+            <div class="botao-menu" id="abrir-menu">
+                <a href="#">
+                    <img src="../imagens/icons/menu-branco.png" alt="">
+                </a>
+            </div>
+            <div class="menu-celular">
+
+
+                <div class="botao-fechar">
+                    <a href="#">
+                        <img src="../imagens/icons/close.png" alt="">
+                    </a>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="../paginas/index.html">HOME</a></li>
+                        <li><a href="../paginas/servicos.html">SERVIÇOS</a></li>
+                        <li><a href="../paginas/trabalhos.html">TRABALHOS</a></li>
+                        <li><a href="../paginas/funcionarios.html">FUNCIONÁRIOS</a></li>
+                        <li><a href="../paginas/historico.html">HISTÓRICO DE AGENDAMENTOS</a></li>
+                        <li><a href="#" class="botao-agendamento"> <button onclick="abrirModal()">AGENDAR
+                                    HORÁRIO</button></a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="overlay-menu"></div>
+        </div><!-- fim conteudo-header-->
+
+    </header>
+    <div id="modal-form" class="modal">
+        <div class="conteudo-modal">
+            <button onclick="fecharModal()" class="fechar-modal">&times;</button>
+            <h2>Agendar Horário</h2>
+            <form>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="contato">Contato:</label>
+                    <input type="tel" id="contato" name="contato" required>
+                </div>
+                <div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div>
+
+                    <div>
+                        <label for="hora">Hora do Serviço:</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                    <label for="servico">Serviço Desejado:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione</option>
+                        <option value="corte">Corte de Cabelo</option>
+                        <option value="barba">Barba</option>
+                        <option value="tintura">Tintura</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                    <button type="button" onclick="fecharModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <main>
+        <div class="servicos">
+            <div class="conteudo">
+                <h2>SERVIÇOS</h2>
+                <div class="cards-servicos">
+                    <div class="card">
+                        <img src="../imagens/icons/beard.png" alt="">
+                        <h3>Barba</h3>
+                    </div>
+                </div>
+                <div class="cards-servicos">
+                    <div class="card">
+                        <img src="../imagens/icons/tesoura.png" alt="">
+                        <h3>Corte de Cabelo</h3>
+                    </div>
+                </div>
+                <div class="cards-servicos">
+                    <div class="card">
+                        <img src="../imagens/icons/hair-color.png" alt="">
+                        <h3>Hidratação e Pintar o cabelo</h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </main>
+    <script src="../paginas/script/script.js"></script>
+</body>
+</html>
