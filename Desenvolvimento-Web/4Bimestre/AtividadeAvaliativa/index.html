@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IFind Cinema</title>
 </head>
 
 <body>
@@ -12,17 +12,17 @@
         <h1>IFind Cinema </h1>
         <input type="text" id="movieName" placeholder="Digite o nome do filme">
         <button id="searchButton">Buscar </button>
-        <h2>Lista de flmes buscados </h2>
+        <h2>Lista de filmes buscados </h2>
         <h2 id="results"> </h2>
     </div>
 
     <script>
 
         const botao = document.getElementById('searchButton');
-        const filme= document.getElementById('movieName');
         let resultado = document.getElementById('results');
 
         botao.addEventListener('click', () => {
+            const filme= document.getElementById('movieName');
             cineFind(filme.value);
         })
 
