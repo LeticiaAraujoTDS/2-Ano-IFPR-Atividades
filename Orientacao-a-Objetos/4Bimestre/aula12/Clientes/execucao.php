@@ -65,7 +65,21 @@ do {
             break;
 
         case '4':
-
+             // 1. Ler o ID do cliente
+            $id = readline("Informe o ID do cliente que deseja buscar: ");
+        
+            // 2. Chamar o método que retorna o objeto cliente do banco de dados
+            $clienteDAO = new ClienteDAO();
+            $cliente = $clienteDAO->buscarPorId($id);
+        
+            // 3. Verificar se o cliente retornado é diferente de NULL
+            if ($cliente !== null) {
+                echo "Cliente encontrado:\n";
+                printf(
+                    "%d- %s | %s|  %s | %s\n", $cliente->getId(), $cliente->getTipo(), $cliente->getNomeSocial(),$cliente->getIdentificacao(), $cliente->getEmail());
+            } else {
+                echo "Cliente não encontrado!\n";
+            }
             break;
 
         case '5':
