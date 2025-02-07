@@ -1,12 +1,19 @@
-function carregaArquivo(container, arquivo){
-
-    fetch(arquivo).
-    then(arq => arq.text()).
-    then(elemento => {
-        document.getElementById(container).innerHTML = elemento;
-    }).catch(erro => console.log('Erro ao carregar o arquivo' + arquivo));
-
+function includeHTML(elementId, file) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.log("Erro ao carregar " + file + ": " + error));
 }
 
-carregaArquivo('container-sidebar', 'sidebar.html');
-carregaArquivo('container-navbar', 'navbar.html');
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Incluir o menu lateral e a navbar
+    includeHTML("container-sidebar", "sidebar.html");
+    includeHTML("container-navbar", "navbar.html");
+    
+});
+
+function toggleMenu(element){
+    // Alternar a visibilidade do menu em telas pequenas
+    document.getElementById("sidebar").classList.toggle("show");
+}
