@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link rel="shortcut icon" type="imagens" href="../imagens/png/patas.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/style.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex flex-column" style="height: 100vh;">
+
+        <div class="row flex-grow d-flex">
+
+            <!-- Sidebar -->
+            <div class="col-lg-2 col-4 p-0 bg-light" id="container-sidebar">
+                <!-- Conteúdo da Sidebar -->
+            </div>
+
+            <!-- Conteúdo principal -->
+            <div class="col-lg-10 col-12 d-flex flex-column">
+
+                <div class="navbar row sticky-top mb-4 shadow-lg">
+                    <div class="m-0 p-0" id="container-navbar"></div>
+                </div>
+
+                <!-- CONTEUDO PRINCIPAL -->
+                 
+                <div class="container-fluid">
+
+                    <div class="row m-0 d-flex justify-content-center">
+
+                        <div class="col-12 col-lg-10 bg-light">
+                            <!-- Formalário -->
+
+                            <div class="card-form row m-3">
+
+                                <div class="formulario p-5 rounded-3">
+
+                                    <h2 class="text-center">CADASTRO</h2>
+                                    <div class="mb-3 col-12">
+                                        <label for="nomeProduto" class="form-label">Nome do Produto</label>
+                                        <input class="form-control" type="text" id="nomeProduto"
+                                            aria-label="default input example">
+                                    </div>
+
+                                    <div class="mb-3 col-12">
+                                        <label for="marcaProduto" class="form-label">Marca</label>
+                                        <input class="form-control" type="text" id="marcaProduto"
+                                            aria-label="default input example">
+                                    </div>
+
+                                    <div class="mb-3 col-12">
+                                        <label for="descricaoProduto" class="form-label">Descrição do
+                                            Produto</label>
+                                        <textarea class="form-control" id="descricaoProduto" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="input-group mb-3 col-12">
+                                        <label class="input-group-text" for="precoProduto">Preço</label>
+                                        <span class="input-group-text">R$</span>
+                                        <input type="text" class="form-control" id="precoProduto"
+                                            aria-label="Amount (to the nearest dollar)">
+                                        <span class="input-group-text">,00</span>
+                                    </div>
+
+                                    <div class="mb-3 col-12">
+                                        <label for="quantidade" class="form-label">Quantidade em Estoque</label>
+                                        <input type="number" class="form-control" id="quantidade" name="quantidade"
+                                            min="0" placeholder="Ex: 10">
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button class="btn btn-dark btn-sm" id="botaoSalvar">Salvar</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- MODAL -->
+                <div class="modal fade" id="detalhes">
+
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Salvar</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                Seu produto foi cadastrado com sucesso!
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <footer class="row text-center mt-auto py-3">
+                    <p>© 2025 Pet Shop, Inc</p>
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        // Vou adicionar o produto cadastrado no localstorage
+        // Basicamente peguei o código da atividade do carrinho e só alterei o input de quantidade
+        let botao = document.getElementById('botaoSalvar')
+        botao.addEventListener('click', function () {
+            const nome = document.getElementById('nomeProduto').value;
+            const marca = document.getElementById('marcaProduto').value;
+            const descricao = document.getElementById('descricaoProduto').value;
+            const preco = document.getElementById('precoProduto').value;
+            const quantidade = document.getElementById('quantidade').value;
+            let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+            const novoProduto = {
+                nome,
+                marca,
+                descricao,
+                preco,
+                quantidade: parseInt(quantidade)
+            };
+            produtos.push(novoProduto);
+
+            localStorage.setItem('produtos', JSON.stringify(produtos));
+
+            document.getElementById('nomeProduto').value = '';
+            document.getElementById('marcaProduto').value = '';
+            document.getElementById('descricaoProduto').value = '';
+            document.getElementById('precoProduto').value = '';
+            document.getElementById('quantidade').value = '';
+        });
+    </script>
+
+</body>
+
+</html>

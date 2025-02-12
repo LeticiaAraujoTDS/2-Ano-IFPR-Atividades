@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    background-color: #FAFAFA;
+}
+
+/* Navbar */
+
+#container-navbar span {
+    font-size: 40px;
+}
+
+.navbar, footer {
+    background-color: #ffffffbb;
+}
+
+footer {
+    color:#094552;
+} 
+#container-navbar a{
+    padding: 3px;
+    border: black 1px solid;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+}
+
+#container-navbar a:hover{
+    background-color: #FAFAFA;
+    box-shadow: 0 4px 20px 10px  #c3c6c653;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Perfil */
+
+.profile{
+    border: 1px black solid;
+}
+
+.profile:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 20px 10px  #c3c6c653;
+}
+
+
+
+/* Pagina Principal */
+
+.card-body canvas {
+    max-width: 100%;
+    height: 30vw;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px 10px  #c3c6c653;
+}
+
+/* Página de Produtos */
+
+.table {
+    width: 80%;
+    border: 1px black solid;
+}
+
+#tabelaProdutos tr:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 20px 10px  #c3c6c653;
+}
+
+/* Estilo para o menu lateral */
+
+.sidebar {
+    min-height: 100%;
+    height: 100vh;
+    background: #094552;
+    color: white;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+} 
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar a:hover:not(:nth-child(1)){
+    color: black;
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    background-color:#ffffffb2;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+/* Estilo para o Cadastro */
+
+.formulario {
+    max-width: 100vh;
+    margin: 0 auto; 
+    border: 1px black solid;
+}
+
+.formulario:hover {
+    box-shadow: 0 4px 20px 10px  #54555553;
+}
+
+.botao button:hover {
+    background-color: #094552;
+}
+
+/* Ocultar a sidebar em telas pequenas */
+
+@media (max-width: 995px) {
+    .sidebar {
+        position: fixed;
+        z-index: 1021 !important;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+}
