@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    padding: 5px;
+    padding: 0.3%;
+    font-size: 20px;
+    display: flex; 
+    z-index: 1000; 
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; 
+    position: relative; 
+    display: inline-block; 
+    line-height: 40px; 
+
+}
+
+nav a::after {
+    content: " ";
+    width: 0%;
+    height: 2px; /*expessura do sublinhado*/
+    background-color: white;
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+body, html {
+    min-height: 100%;
+    margin: 0;
+    background-color: #193441;
+}
+
+/* Flip Card CSS */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo para a frente do card */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo para o verso do card */
+.flip-card-back {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+/*** Direções do Flip ***/
+.flip-horizontal-right:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-horizontal-right .flip-card-back {
+    transform: rotateY(180deg);
+}
+/* Estilo para o contêiner de cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 120px 20px 20px; /* Espaçamento superior para não sobrepor a barra de navegação */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+/* Estilo para os cards */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Largura do card */
+    height: 400px; /* Altura do card */
+    position: relative; /* Necessário para o efeito de sobreposição da descrição */
+    overflow: hidden; /* Garante que a imagem e o conteúdo não vazem o card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o card */
+    background-position: center; /* Centraliza a imagem de fundo */
+    transition: transform 0.3s;
+}
+/* Estilo para a imagem dos cards */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+/* Conteúdo dos cards */
+.card-content {
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.card-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent; /* Fundo transparente */
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+.card-button:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Ajusta a largura dos cards para telas menores */
+        max-width: 300px; /* Limita a largura máxima dos cards */
+    }
+}
+@media (max-width: 480px) {
+    .card-container {
+        padding: 20px 10px; /* Ajusta o padding em telas menores */
+    }
+}
+
+/**** Icones ***/
+#social-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza ícones e nome */
+    justify-content: flex-start;
+    position: fixed;
+    right: 20px;
+    top: calc(100% - 420px); /* Começa na mesma altura que a seção "Informações de Contato" */
+  }
+  
+  #social-midia .social-icon {
+    margin-bottom: 20px; /* Aumenta a margem inferior do ícone */
+  }
+  
+  #social-midia .social-icon i {
+    font-size: 32px; /* Aumenta o tamanho do ícone */
+    color: #f7e0cb; /* Cor dos ícones sociais */
+  }
+  
+  #social-midia .social-nome {
+    font-family: 'Arvo', serif;
+    font-style: italic;
+    color: #f7e0cb; /* Cor do nome */
+    transform: rotate(-90deg); /* Nome deitado */
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+  

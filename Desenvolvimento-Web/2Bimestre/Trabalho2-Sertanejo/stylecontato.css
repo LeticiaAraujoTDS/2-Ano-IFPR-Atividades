@@ -1,0 +1,512 @@
+/*** Começo da Parte da Helooo  ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'faroeste';
+  src: url('./fontes/Carnevalee Freakshow.ttf') format('truetype');
+  font-weight: large;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'aotten';
+  src: url('./fontes/Aotten.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'bonuses';
+  src: url('./fontes/Bonuses and services.pdf');
+}
+
+
+@font-face {
+  font-family: 'nova';
+  src: url(./fontes/against\ regular.otf);
+}
+
+body {
+  background-color: #273940; /* Cor de fundo da página inteira */
+  font-family: 'Arvo', serif; /* Fonte Arvo */
+  color: #f7e0cb;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 0.3%;
+  font-size: 20px;
+  display: flex; 
+  z-index: 1000; 
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px; 
+  position: relative; 
+  display: inline-block; 
+  line-height: 40px; 
+}
+
+nav a::after {
+  content: " ";
+  width: 0%;
+  height: 2px; /* Espessura do sublinhado */
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+/*** Fim da Parte da Helooo  ***/
+
+
+/***  COMEÇO DA PARTE DE CONTATO ***/
+header {
+  background-color: #273940; /* Cor de fundo do header */
+  padding : 10px 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Ajusta a disposição da seção de contato e ícones sociais */
+  padding: 20px;
+  gap: 20px; /* Espaço entre as seções */
+  height: 100vh; /* Altura da viewport */
+  overflow: hidden; /* Esconde rolagem global */
+  background-color: #273940;
+  margin-top: 80px; /* Espaço entre a nav e o conteúdo */
+}
+
+/** Começo da Parte da Imagem **/
+#secao-img {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+  }
+  
+#secao-img img {
+    width: 500px;
+    height: auto;
+    border: 10px solid #E8F2D0;
+    border-radius: 20px;
+}
+
+/** Fim da Parte da Imagem **/
+
+/** Começo da Parte de Contato **/
+#contato-inf {
+  background-color: #38545f;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 140px 0 0;
+  color: #f7e0cb;
+  font-size: 18px;
+  flex: 1; /* Ocupará um espaço igual ao da seção de imagem */
+  max-width: 400px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contato-inf h2 {
+  font-family: 'aotten';
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #E8F2D0;
+}
+
+.contato-item {
+  margin-bottom: 20px;
+}
+
+.contato-item h3 {
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  color: #f7e0cb;
+  margin-bottom: 5px;
+}
+
+.contato-item p {
+  font-size: 16px;
+}
+
+.contato-item a {
+  color: #E8F2D0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contato-item a:hover {
+  color: #273940; /* Cor desejada ao passar o mouse */
+}
+
+#messagem-link {
+  margin-top: 20px;
+}
+
+#messagem-link a {
+  color: #273940;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#messagem-link a:hover {
+  text-decoration: underline;
+}
+
+/*** Final da Parte de Contato ***/
+
+
+/*** Começo da Parte de Formulário ***/
+#contact-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #38545f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.contact-form {
+  width: 300px;
+}
+
+.contact-form label {
+  font-family: 'Arvo', serif;
+  color: #f7e0cb;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #273940;;
+  border-radius: 4px;
+  background-color: #f7e0cb;
+  color: #273940;
+}
+
+.contact-form button {
+  background-color: #627348;
+  color: #f7e0cb;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #38545f;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-header h2 {
+  font-family: 'Arvo', serif;
+  font-size: 24px;
+  color: #E8F2D0;
+}
+
+.form-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #627348;
+  cursor: pointer;
+}
+
+.form-header button:hover {
+  color: #f7e0cb;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #E8F2D0;
+  color: #273940;
+  padding: 20px;
+  border: 2px solid #D9763D;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Para garantir que o modal fique sobre outros elementos */
+}
+
+
+/*** Final da Parte de Formulário ***/
+
+
+
+/** Começo da Parte das Midias Sociais **/
+#contato-inf a:hover {
+  color: #e7c09c; /* Cor ao passar o mouse */
+}
+
+#social-midia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  right: 20px;
+  top: calc(100% - 420px);
+}
+
+#social-midia .social-icon {
+  margin-bottom: 20px;
+}
+
+#social-midia .social-icon i {
+  font-size: 32px;
+  color: #f7e0cb;
+}
+
+#social-midia .social-nome {
+  font-family: 'Arvo', serif;
+  font-style: italic;
+  color: #f7e0cb;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  margin-top: 50px;
+}
+
+#social-midia .social-icon:first-of-type {
+  margin-top: 0;
+}
+
+/*** FIM DA PARTE DE CONTATO  ***/
+
+#ouca {
+  overflow: hidden;
+  background-color: #273940;
+  padding: 60px 20px;
+  color: #f7e0cb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 80px; 
+}
+
+#ouca .content {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px; /* Espaço entre a imagem e o conteúdo dos botões */
+}
+
+.photo {
+  flex: 0 0 auto; /* Ajusta o tamanho da imagem para não sobrepor o conteúdo */
+  max-width: 500px; /* Largura máxima da imagem */
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border: 10px solid #E8F2D0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.tracks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tracks h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: #38545f;
+  margin-bottom: 30px;
+}
+
+.tracks .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tracks .btn {
+  background-color: #38545f;
+  color: #f7e0cb;
+  padding: 25px 50px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 50px;
+  width: 500px;
+  max-width: 500px;
+  transition: background-color 0.3s ease;
+}
+
+.tracks .btn:hover {
+  background-color: #122127;
+}
+
+
+
+@media screen and (max-width: 1150px) {
+  .timeline {
+      width: 80vw;
+  }
+
+  .timeline .checkpoint {
+      width: 100%;
+      transform: none;
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+      justify-content: flex-start; /* Alinha os checkpoints ao início da linha do tempo */
+  }
+
+  .timeline .checkpoint::before {
+      width: 3px;
+      height: 64px;
+      top: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  .timeline .checkpoint div::before {
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Alinhar conteúdo verticalmente em telas menores */
+    align-items: center; /* Centralizar o conteúdo */
+    height: auto; /* Remover a altura fixa */
+  }
+
+  #secao-img {
+    max-width: 100%; /* Fazer a imagem ocupar a largura máxima */
+    text-align: center;
+  }
+
+  #secao-img img {
+    width: 100%; /* Tornar a imagem responsiva */
+    max-width: 300px; /* Largura máxima */
+  }
+
+  #contato-inf {
+    max-width: 100%; /* Largura completa para a seção de contato */
+    margin-top: 20px; /* Espaço entre a imagem e a seção de contato */
+  }
+
+  #social-midia {
+    position: absolute; /* Manter os ícones ao lado, fixos na tela */
+    right: 10px; /* Ajustar a distância da borda direita */
+    top: 50%; /* Centralizar verticalmente */
+    transform: translateY(-50%); /* Ajustar para que fique centrado */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: 16px; /* Reduzir o tamanho da fonte da navbar */
+  }
+
+  nav a {
+    padding: 8px 15px; /* Reduzir o padding */
+  }
+
+  .photo img {
+    max-width: 100%; /* Ajustar o tamanho da imagem */
+    border-width: 5px; /* Reduzir a espessura da borda */
+  }
+
+  .tracks .btn {
+    padding: 20px 30px; /* Reduzir o padding dos botões */
+    width: 100%; /* Tornar os botões responsivos */
+  }
+
+  #social-midia {
+    position: absolute; /* Garantir que os ícones ainda estejam ao lado */
+    right: 5px; /* Ajustar a posição à direita */
+    top: 50%; /* Centralizar verticalmente */
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ouca .content {
+    flex-direction: column; /* Mudar para coluna em telas menores */
+    gap: 20px; /* Reduzir o espaço entre a imagem e o conteúdo */
+  }
+
+  .tracks h2 {
+    font-size: 2em; /* Reduzir o tamanho do título */
+  }
+
+  .tracks .btn {
+    font-size: 1em; /* Reduzir o tamanho da fonte dos botões */
+  }
+
+  #contact-form {
+    width: 90%; /* Tornar o formulário responsivo */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px; /* Reduzir o tamanho da fonte dos inputs */
+  }
+
+  #social-midia {
+    position: fixed; /* Manter fixo na tela em dispositivos móveis */
+    right: 0; /* Fixar ao lado direito */
+    top: 50%; /* Centralizar verticalmente */
+    transform: translateY(-50%);
+  }
+}
+

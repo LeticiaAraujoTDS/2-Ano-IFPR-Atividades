@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'faroeste';
+    src: url('./fontes/Carnevalee Freakshow.ttf') format('truetype');
+    font-weight: large;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aotten';
+    src: url('./fontes/Aotten.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'bonuses';
+    src: url('./fontes/Bonuses and services.pdf');
+}
+
+
+@font-face {
+    font-family: 'nova';
+    src: url(./fontes/against\ regular.otf);
+}
+body {
+    padding-top: 60px; 
+}
+
+nav {
+    padding: 5px;
+    padding: 0.3%;
+    font-size: 20px;
+    display: flex; 
+    z-index: 1000; 
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; 
+    position: relative; 
+    display: inline-block; 
+    line-height: 40px; 
+
+}
+
+nav a::after {
+    content: " ";
+    width: 0%;
+    height: 2px; /*expessura do sublinhado*/
+    background-color: white;
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    color: white;
+    font-family: 'nova';
+    
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    color: white;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 60px;
+    border-radius: 10px;
+    border: 2px solid #627348;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button .spanContainer {
+    background: #627348;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+button:hover .spanContainer {
+    width: 100%;
+}
+
+button:hover .spanContainer {
+    border: none;
+}
+
+.bg {
+    background-image: url(imagens/MarcelaAzevedo.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.agenda {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.background-section {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Gradiente atrás de tudo */
+
+}
+
+
+.background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0)); 
+    z-index: 1; 
+}
+
+.container-fluid {
+    max-width: 50%;
+    margin: 0px 100px 20px 0px;
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+    height: 900px; 
+}
+
+.container-fluid::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.container-fluid::-webkit-scrollbar-thumb {
+    background-color: #5d688a; 
+}
+.social-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.social-bar a {
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-bar a img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-bar a:hover {
+    transform: scale(1.2); 
+}
+
+
+.data {
+    font-size: 20px;
+    padding: 10px 0 10px 10px;
+    color: white;
+    background: linear-gradient(to right, rgba(155, 153, 153, 0.425), rgba(255, 255, 255, 0)); /* Gradiente */
+    border-radius: 10px;
+}
+
+.agenda h1 {
+    color: white;
+    font-size: 50px;
+    margin: 20px 10px 10px 10px;
+    border: 0 0 10px 0;
+}
+
+
+.agendaImage {
+    display: flex; 
+    justify-content: flex-start; 
+    
+    border: 0 30px; 
+    margin: 50px 100px;
+    width: 70vh;
+    align-items: center; 
+    box-shadow: white 10px 10px;
+}
+
+
+.text {
+    font-size: 25px;
+    color: white;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ingresso {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid white 2px;
+    margin: 0 10px;
+}
+
+.ingresso:hover {
+    background-color: #5a6dd8;
+}
+
+.agendona {
+    background-color: #304173;
+    z-index: 0; 
+}
+
+.lugar {
+    padding: 5px 0 15px 0;
+    color: white;
+}
+
+
+/******************Biografia***************/
+.pagbiografia{
+    background-color: #273940 ;
+}
+
+.biografia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 60px;
+}
+.secaobio-container{
+    margin-bottom: 50px;
+}
+.secaobio h1 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 40px;
+}
+.secaobio h2 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 40px;
+    padding: 0 0 0 30px;
+}
+.secaobio h3 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 50px;
+    padding: 0 0 0 30px;
+}
+
+.secaobio p {
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 40px;
+    padding: 0 0 0 20px;
+}
+.secaobio #Iniciocarreira {
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 50px;
+    padding: 0 0 0 30px;
+}
+.secaobio #Ascencaosucesso{
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 60px;
+    padding: 0 0 0 40px;
+}
+
+
+.secaobio {
+    background-color: #38545f;
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 5%;
+    float: left;
+    
+}
+
+.imagebio {
+    justify-content: left;
+    flex: 1 1 30%;
+    max-width: 30%;
+    height: auto;
+    margin: 10px 100px;
+    border-radius: 25% 25% 10% 10%;
+    box-shadow: 20px 25px#122127;
+}
+
+#bio-adicional {
+    max-width: 40%; 
+    background-color: #38545f;
+    padding: 20px;
+    margin: 0 30px 0  0;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    float: right;
+  }
+
+#bio-adicional h2, h3, h4 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 40px;
+    padding: 0;
+}
+
+#bio-adicional p{
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 40px;
+    padding: 0 0 0 20px;
+}
+
+.bio-img {
+    text-align: left;
+    align-self: center;
+    margin: 0 0 0 100px;
+}
+
+.bio-img img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10%; 
+}
+
+/**** Icones ***/
+#social-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza ícones e nome */
+    justify-content: flex-start;
+    position: fixed;
+    right: 0; /* Cola à borda direita */
+    top: 50%; /* Posiciona verticalmente no meio da página */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    z-index: 1000; /* Coloca acima de outros elementos */
+  }
+  
+  #social-midia .social-icon {
+    margin-bottom: 20px; /* Espaço entre ícones */
+  }
+  
+  #social-midia .social-icon i {
+    font-size: 32px; /* Tamanho dos ícones */
+    color: #f7e0cb; /* Cor dos ícones sociais */
+  }
+  
+  #social-midia .social-nome {
+    font-family: 'Arvo', serif;
+    font-style: italic;
+    color: #f7e0cb; /* Cor do nome */
+    transform: rotate(-90deg); /* Nome deitado */
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+  
+  #social-midia .social-icon:first-of-type {
+    margin-top: 0; 
+}

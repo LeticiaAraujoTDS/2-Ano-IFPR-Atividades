@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Marcela Azevedo</title>
+    <link rel="stylesheet" href="stylecontato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        function showForm() {
+            document.getElementById('contact-form').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function hideForm() {
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showSuccessMessage() {
+            document.getElementById('success-message').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('success-message').style.display = 'none';
+                hideForm();
+            }, 3000); // Oculta a mensagem após 3 segundos
+        }
+
+        function handleSubmit(event) {
+          event.preventDefault(); // Impede o envio real do formulário
+          hideForm();
+            showSuccessMessage(); // Mostra a mensagem de sucesso
+        }
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Agenda.html">Agenda</a>
+            <a href="Discografia.html">Discografia</a>
+            <a href="Ouca.html">Ouça</a>
+            <a href="Biografia.html">Biografia</a>
+            <a href="Contato.html">Contato</a>
+            <a href="AlbumFotos.html">Álbum de Fotos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="secao-img">
+            <img src="./imagens/MarcelaAzevedo1.png" alt="Marcela Azevedo">
+        </section>
+
+        <aside id="contato-inf">
+            <h2>Informações de Contato</h2>
+            <div class="contato-item">
+                <h3>Contato para Show</h3>
+                <p><a href="mailto:shows@marcelaazevedo.com.br">shows@marcelaazevedo.com.br</a></p>
+            </div>
+            <div class="contato-item">
+                <h3>Fã Clube</h3>
+                <p><a href="https://instagram.com/MarcelaFandom" target="_blank">@MarcelaFandom</a></p>
+            </div>
+            <div class="contato-item">
+                <h3>Campanhas Publicitárias</h3>
+                <p><a href="https://instagram.com/PublicidadeMarcela" target="_blank">@PublicidadeMarcela</a></p>
+            </div>
+            <div class="contato-item">
+                <h3>Imprensa</h3>
+                <p><a href="https://instagram.com/ImprensaMarcela" target="_blank">@ImprensaMarcela</a></p>
+            </div>
+            <div class="contato-item">
+                <h3>Marketing</h3>
+                <p><a href="https://instagram.com/MarketingMarcela" target="_blank">@MarketingMarcela</a></p>
+            </div>
+            <div class="contato-item">
+                <h3>Assessoria de TV</h3>
+                <p><a href="https://instagram.com/TVMarcela" target="_blank">@TVMarcela</a></p>
+            </div>
+            <div class="contato-item">
+                <h3>Correspondência</h3>
+                <p><a href="https://maps.google.com/?" target="_blank">Escritório Rua Moreira Cabral, 347 <br>
+                    Bairro Feliciana Carolina
+                    CEP: 79009-150 | <br> Campo Grande - MS</a></p>
+            </div>
+            <p id="messagem-link"><a href="javascript:void(0)" onclick="showForm()">Deseja mandar uma mensagem?</a></p>
+        </aside>
+    </div>
+
+    <div id="social-midia">
+        <a href="https://instagram.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://youtube.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <p class="social-nome">Marcela Azevedo</p>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="contact-form" class="contact-form">
+        <div class="form-header">
+            <h2>Contato</h2>
+            <button onclick="hideForm()">x</button>
+        </div>
+        <form onsubmit="handleSubmit(event)"  method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        
+
+    </div>
+    <div id="success-message" class="success-message" style="display: none;">
+            <p>Mensagem Enviada com Sucesso!</p>
+    </div>
+</body>
+</html>
+
