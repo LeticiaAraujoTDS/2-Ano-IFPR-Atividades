@@ -1,0 +1,252 @@
+/***  Começo da Parte da Helooo  ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #591218; /* Cor de fundo da página inteira */
+  font-family: 'Arvo', serif; /* Fonte Arvo */
+  color: #E8F2D0;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 5px;
+  margin-left: 1%;
+  margin: 2%;
+  padding: 0.3%;
+  font-size: 15px;
+  display: flex;
+  background-color: #591218; /* Cor de fundo da nav */
+}
+
+nav a {
+  color: #E8F2D0; /* Cor dos links da navegação */
+  text-decoration: none;
+  padding: 0px 50px 10px 0px;
+  position: relative;
+}
+
+/* "::after" é um pseudoelemento, voce adiciona outro elemento depois do elemento "nav a", que no caso vai ser a "borda de baixo"
+content=" " para dizer que o conteúdo dessa nav é vazia*/
+nav a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #E8F2D0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease-in-out; /*ease-in-out serve para que ele comece suave e termine suave*/
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+/***   Fim da Parte da Helooo  ***/
+
+
+header {
+  background-color: #591218; /* Cor de fundo do header */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Ajusta a disposição da seção de contato e ícones sociais */
+  padding: 20px;
+  gap: 20px; /* Espaço entre as seções */
+  height: 100vh; /* Altura da viewport */
+  overflow: hidden; /* Esconde rolagem global */
+}
+
+/** Começo da Parte da Imagem **/
+#secao-img {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  margin-right: 360px;
+
+}
+
+#secao-img img {
+  background-color: #485673;
+  padding: 10px;
+  max-width: 400px;
+  height: 80%;
+  overflow-y: auto;
+  color: #E8F2D0;
+  border-radius: 18px;
+}
+
+/** Fim da Parte da Imagem **/
+
+/** Começo da Parte de Contato **/
+#contato-inf {
+  flex: 1;
+  background-color: #591218; /* Cor de fundo da seção de contato */
+  padding: 20px;
+  border-radius: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #D9763D #591218;
+  margin-left: 40px;
+}
+
+#contato-inf h2, #contact-form h2 {
+  color: #E8F2D0;
+}
+
+.contaco-item {
+  margin-bottom: 20px; /* Aumenta o espaçamento entre os itens de contato */
+}
+
+.contato-item h3 {
+  margin-bottom: 5px;
+  color: #D9763D;
+}
+
+.contato-item p {
+  margin: 5px 0;
+}
+
+#contato-inf a {
+  text-decoration: none;
+  color: #E8F2D0; /* Cor dos links na seção de contato */
+}
+
+#contato-inf a:hover {
+  color: #D9763D; /* Muda a cor para um tom da paleta quando o mouse passa por cima */
+}
+
+#messagem-link a {
+  color: #E8F2D0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#messagem-link a:hover {
+  text-decoration: underline;
+}
+/** Fim da Parte de Contato **/
+
+/** Começo da Parte do Formulario **/
+#contato-forma {
+  flex: 1;
+  background-color: #591218; /* Cor de fundo da área de formulário de contato */
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+  color: #E8F2D0;
+}
+
+#contato-forma label, #contato-forma input, #contato-forma textarea, #contato-forma button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#forma-contato input, #forma-contato textarea {
+  padding: 10px;
+  border: 1px solid #D9763D;
+  border-radius: 5px;
+  background-color: #E8F2D0;
+}
+
+#forma-contato button {
+  background-color: #D9763D;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#forma-contato button:hover {
+  background-color: #BF4F26;
+}
+/** Fim da Parte do Formulario **/
+
+/** Começo da Parte das Midias Socias **/
+#social-midia {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza ícones e nome */
+  justify-content: flex-start;
+  position: fixed;
+  right: 20px;
+  top: calc(100% - 420px); /* Começa na mesma altura que a seção "Informações de Contato" */
+}
+
+#social-midia .social-icon {
+  margin-bottom: 20px; /* Aumenta a margem inferior do ícone */
+}
+
+#social-midia .social-icon i {
+  font-size: 32px; /* Aumenta o tamanho do ícone */
+  color: #E8F2D0; /* Cor dos ícones sociais */
+}
+
+#social-midia .social-nome {
+  font-family: 'Arvo', serif;
+  font-style: italic;
+  color: #E8F2D0; /* Cor do nome */
+  transform: rotate(-90deg); /* Nome deitado */
+  white-space: nowrap;
+  margin-top: 50px;
+}
+
+#social-midia .social-icon:first-of-type {
+  margin-top: o; /* Remove margem superior do primeiro ícone */
+}
+
+
+.platforms {
+  background-color: #f7f7f7;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.platforms h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.platforms-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.platform {
+  margin: 10px;
+  width: 100px;
+}
+
+.platform a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.platform a:hover {
+  transform: scale(1.1);
+}
+
+.platform img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
